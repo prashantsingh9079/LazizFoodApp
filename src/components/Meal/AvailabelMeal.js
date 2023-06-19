@@ -1,4 +1,5 @@
 import classes from './AvailableMeal.module.css'
+import Card from '../UI/Card';
 
 const DUMMY_MEALS = [
     {
@@ -28,7 +29,14 @@ const DUMMY_MEALS = [
   ];
   
   const AvailableMeal = () => {
-    const mealsList = DUMMY_MEALS.map((meal) => <li>{meal.name}</li>);
+    const mealsList = DUMMY_MEALS.map((meal) => {
+        return (
+            <Card>
+                {meal.name +"\n"+ meal.description+"\n"+meal.price}
+                
+            </Card>
+        )
+    });
   
     return (
       <section className={classes.meals}>
