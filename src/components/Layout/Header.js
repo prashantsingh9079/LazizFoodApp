@@ -10,7 +10,7 @@ export default function Header(props) {
     <>
       <header className={classes.header}>
         <h1>Laziz Food</h1>
-        <HeaderCartButton openCart={props.changeStatus}> Cart</HeaderCartButton>
+        <HeaderCartButton onClick={props.onShowCart}> Cart</HeaderCartButton>
       </header>
       <div className={classes['main-image']}>
         <img src={mealsImage} alt="meals" />
