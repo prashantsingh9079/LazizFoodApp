@@ -1,11 +1,11 @@
-import Header from "./components/Layout/Header";
-import Meal from "./components/Meal/Meal";
-import Cart from "./components/Cart/Cart";
-import React,{useState} from "react";
-import cartProvider from "./store/cartProvider";
+import { useState } from 'react';
+
+import Header from './components/Layout/Header';
+import Meals from './components/Meals/Meals';
+import Cart from './components/Cart/Cart';
+import CartProvider from './store/CartProvider';
 
 function App() {
-
   const [cartIsShown, setCartIsShown] = useState(false);
 
   const showCartHandler = () => {
@@ -17,13 +17,13 @@ function App() {
   };
 
   return (
-    <cartProvider>
-    {cartIsShown && <Cart onClose={hideCartHandler} />}
+    <CartProvider>
+      {cartIsShown && <Cart onClose={hideCartHandler} />}
       <Header onShowCart={showCartHandler} />
       <main>
-        <Meal/>
+        <Meals />
       </main>
-    </cartProvider>
+    </CartProvider>
   );
 }
 

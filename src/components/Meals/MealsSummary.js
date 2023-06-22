@@ -1,7 +1,6 @@
-import React from 'react'
-import classes from './MealSummary.module.css'
+import classes from './MealsSummary.module.css';
 
-export default function MealSummary() {
+const MealsSummary = () => {
   return (
     <section className={classes.summary}>
       <h2>Delicious Food, Delivered To You</h2>
@@ -14,5 +13,7 @@ export default function MealSummary() {
         of course by experienced chefs!
       </p>
     </section>
-  )
-}
+  );
+};
+
+export default MealsSummary;
