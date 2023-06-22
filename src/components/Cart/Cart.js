@@ -8,7 +8,7 @@ import CartContext from '../../store/cart-context';
 const Cart = (props) => {
   const cartCtx = useContext(CartContext);
 
-  const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;
+  const totalAmount = `Rs ${cartCtx.totalAmount.toFixed(2)}`;
   const hasItems = cartCtx.items.length > 0;
 
   const cartItemRemoveHandler = (id) => {
@@ -34,6 +34,11 @@ const Cart = (props) => {
     </ul>
   );
 
+  function orderLog()
+  {
+    console.log("food is ordered pls wait 🤣👌")
+  }
+
   return (
     <Modal onClose={props.onClose}>
       {cartItems}
@@ -45,7 +50,7 @@ const Cart = (props) => {
         <button className={classes['button--alt']} onClick={props.onClose}>
           Close
         </button>
-        {hasItems && <button className={classes.button}>Order</button>}
+        {hasItems && <button onClick={orderLog} className={classes.button}>Order</button>}
       </div>
     </Modal>
   );

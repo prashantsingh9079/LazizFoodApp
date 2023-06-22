@@ -27,6 +27,12 @@ const DUMMY_MEALS = [
     description: 'Famous marathi style Vada Pav',
     price: 45,
   },
+  {
+    id: 'm5',
+    name: 'Pani Puri',
+    description: 'popular bite-size chaat',
+    price: 20,
+  },
 ];
 
 const AvailableMeals = () => {
